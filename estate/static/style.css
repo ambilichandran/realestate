@@ -1,0 +1,121 @@
+@media (min-width: 992px) {
+    .navbar,
+    .navbar-collapse {
+      flex-direction: column;
+      font-size: 25px;
+      text-align: center;
+      padding: 3px;
+    }
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: column;
+    }
+    .navbar {
+      width: 28%;
+      height: 100vh;
+      align-items: flex-start;
+    }
+    .navbar-brand {
+      margin-left: 0.5em;
+      padding-bottom: 0;
+      font-size: 40px;
+      text-align: center;
+      border-bottom: 4px solid #382d2d;
+      
+    }
+  }
+.footer
+{
+  background-color: rgb(211, 209, 209);
+  justify-content: space-between;
+  margin-top: 1000px;
+}
+.footer1 
+{
+  line-height: 40px;
+  margin-left: 100px;
+}
+.footer1 > u > p
+{
+  margin-left: 50px;
+}
+.footer2 > u > p
+{
+  margin-left: 50px;
+}
+.footer2 
+{
+  line-height: 30px;
+  margin-left: 200px;
+}
+.box1
+{
+  display: flex;
+  padding: 50px;
+}
+.footer3
+{
+  line-height: 45px;
+  margin-left: 50px;
+  margin-top: -7px;
+}
+.footerend
+{
+font-size: x-small;
+text-align: center;
+margin-left: 955px;
+}
+.box2
+{
+  height: 130px;
+  margin-left: 400px;
+  margin-top: 50px;
+}
+.box2 > h4
+{
+  text-align: center;
+}
+.team 
+{
+  height: 30px;  
+}
+.detail
+{
+  width: 800px;
+  margin-left: 400px;
+  margin-top: 50px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide1
+{
+  text-align: center;
+  margin-top: 50px;
+}
+.slide2 > img
+{
+height: 100px;
+width: 70px;
+}
+.heading
+{
+  text-align: center;
+  margin-top: 30px;
+}

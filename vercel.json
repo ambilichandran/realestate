@@ -1,0 +1,18 @@
+{
+    "builds":[
+        {
+            "src":"realestate/wsgi.py",
+            "use":"@vercel/python",
+            "config":{
+                "maxLambadaSize":"15mb",
+                "runtime":"python3.12"
+            }
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"realestate/wsgi.py"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{% extends "theme.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<div class="container">
+  <div class="row" style="margin-left: 270px; margin-top: 50px;">
+    {% for a in data %}
+    <div class="col-md-4">
+      <div class="card " style="width: 18rem; height: 350px;">
+        <img src="{{a.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{a.name}}</h5>
+          <p class="card-text">{{a.description}}</p>
+          <a href="{% url 'about' %}" class="btn btn-primary">More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="box">
+  <div class="feedback" style="text-align: center; margin-top: 50px;">
+    <h1>Feedback Form</h1>
+  </div>
+<div class="feedback1" style="width: 600px; margin-left: 500px; margin-top: 60px;">
+  <form class="form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{form.client_name}}
+    </div>
+    <div class="mb-3">
+      {{form.profession}}
+    </div>
+    <div class="mb-3">
+      {{form.image}}
+    </div>
+    <div class="mb-3">
+      {{form.comment}}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+<div class="slide1" style="margin-top: 300px;">
+  <h1>Our Clients Says!</h1>
+  <p>Lorem ipsum odor amet, consectetuer adipiscing elit. <br>
+    Duis leo libero convallis penatibus vivamus. <br>
+    Tortor duis dictumst nisl senectus morbi accumsan nulla.
+  </p>
+</div>
+<div class="slide2" >
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for a in comment %}
+      <div class="swiper-slide">
+        <div class="card" style="width: 20rem; height: 20rem;">
+          <img class="card-img-top" src={{a.image.url}} alt="Card image cap" style="height: 100px; width: 100px; margin-top: 30px; margin-left: 95px; border-radius: 100px;">
+          <div class="card-body " style="margin-bottom: 150px;">
+            <h5 class="card-title">{{a.client_name}}</h5>
+            <h6 class="card-text">{{a.profession}}</h6>
+            <p class="card-text">{{a.comment}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="{% static 'scripts.js' %}"></script>
+</div>
+{% endblock %}

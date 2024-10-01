@@ -1,0 +1,39 @@
+{% extends "theme.html" %}
+{% block content %}
+{% load static %}
+  
+<div class="box2">
+        <h4>About Us</h4>
+<div class="container">
+    <div class="row">
+        {% for b in data %}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-solid fa-building"></i> {{b.name}}</h5>
+                  <hr>
+                  <p class="card-text">{{b.description}}</p>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="team">
+    <h4>Our Teams</h4>
+    <div class="row">
+        {% for a in team %}
+        <div class="col-md-4">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top " src="{{a.image.url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{a.name}}</h5>
+                  <p class="card-text">{{a.qualification}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>  
+</div>
+</div>
+</div>
+{% endblock %}
